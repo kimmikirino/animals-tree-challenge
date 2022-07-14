@@ -1,0 +1,26 @@
+.tree {
+  background-color: #efefef;
+  height: 100%;
+  padding: 10px;
+  font-family: monospace
+}
+
+.tree > ul {
+  padding-left: 0;
+}
+
+ul {
+  padding-left: 45px;
+  list-style-type: none;
+}
+
+form {
+  display: inline-block;
+}
+
+input {
+  width: 100px;
+  height: 20px;
+  margin-left: 10px;
+  border: none;
+}

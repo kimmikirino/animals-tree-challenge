@@ -1,0 +1,19 @@
+[
+  {
+    "name": "mammals",
+    "branches": [
+      { "name": "cheetah", "branches": [] },
+      {
+        "name": "bear",
+        "branches": [
+          { "name": "lion", "branches": [] },
+          {
+            "name": "dog",
+            "branches": [{ "name": "elephant", "branches": [] }]
+          }
+        ]
+      },
+      { "name": "ape", "branches": [] }
+    ]
+  }
+]

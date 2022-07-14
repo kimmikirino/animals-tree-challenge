@@ -1,0 +1,111 @@
+import React from "react";
+import { Col, Container, Row } from "reactstrap";
+import "./App.css";
+import Tree from "./tree";
+
+export default function App() {
+  return (
+    <div className="App">
+      <Container>
+        <Row>
+          <Col>
+            <h1>Welcome!</h1>
+            <hr />
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={6}>
+            <div className="App-instructions">
+              <div className="App-step">Layout and style</div>
+              <div className="App-instructions">
+                <ol>
+                  <li>
+                    Check out the file <code>./src/tree/index.js</code>.
+                  </li>
+                  <li>
+                    Replace the inline <code>&nbsp</code> "styling" with an improved layout
+                    by editing the html and css in the <code>./src/tree/index.js</code>
+                    and <code>./tree/index.css</code> files.
+                  </li>
+                  <li>
+                    When the results look the same as the original,
+                    please commit changes to main and push to remote.
+                  </li>
+                </ol>
+              </div>
+              <div className="App-step">Data modeling</div>
+              <div className="App-instructions">
+                <ol>
+                  <li>
+                    Check out the (empty) file <code>./src/tree/data.json</code>.
+                  </li>
+                  <li>
+                    Add a JSON object to that file that represents our
+                    animal tree. It should capture just the values and
+                    relationships currently onscreen after step one.
+                  </li>
+                  <li>
+                    Update <code>./tree/index.js</code> to use your JSON object
+                    to draw the animal tree instead of the (styled) inline
+                    text.
+                  </li>
+                  <li>
+                    When the results look exactly the same as the original,
+                    please commit changes and push to remote.
+                  </li>
+                </ol>
+              </div>
+              <div className="App-step">Interactions</div>
+              <div className="App-instructions">
+                <ol>
+                  <li>
+                    Add a text input immediately to the right of each animal.
+                  </li>
+                  <li>
+                    When someone types a new animal in the text box and hits enter, add that animal as a 
+                    child of the current node and make sure it is rendered on the screen. Some examples 
+                    of how this works:
+                    <ol>
+                      <li>
+                        If you have an input next to 'mammals', type the word 'cat', 
+                        and hit enter, the word 'cat' would render below 'ape' at the same 
+                        level of indentation as 'ape'.
+                      </li>
+                      <li>
+                        If you have an input next to 'elephant', type the word 'mouse', 
+                        and hit enter, the word 'mouse' would render below 'elephant' at the
+                        next level of indentation'.
+                      </li>
+                      <li>
+                        If you have an input next to 'dog', type the word 'cat', and 
+                        hit enter, the word 'cat' would render below 'elephant' at the same 
+                        level of indentation as 'elephant'. 
+                      </li>
+                    </ol> 
+                  </li>
+                  <li>
+                    When you can add items from the tree, commit your
+                    changes and push to remote.
+                  </li>
+                </ol>
+              </div>
+              <div className="App-step">On-Site next steps</div>
+                If invited for an on-site interview, we may discuss/code one or more of the following:
+                <ol>
+                  <li>How would you add unit testing to this repo? What kinds of tests would you write?</li>
+                  <li>How would you remove elements from the tree?</li>
+                  <li>
+                    Fun additions to the text itself, such as after the first letter of each element, add 
+                    as many periods as the level the element is on. (Root is 0) E.g. <code>d..og</code>.
+                  </li>
+                </ol>
+            </div>
+          </Col>
+          <Col >
+          <Tree />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
+}
